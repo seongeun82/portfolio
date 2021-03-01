@@ -1,0 +1,42 @@
+.outer {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: green;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.inner {
+    width: 100%;
+    height: 50%;
+}
+
+.inner1 {
+    background-color: blue;
+}
+
+.inner2 {
+    background-color: yellow;
+}
+
+/* 두개의 박스를 만들어 안에 있는 이너 박스들의 포지션을 달리할 생각이다. 
+색등 기본적인 상황은 box, inner를 클래스로 활용해서 넣도록 하고 
+박스 별로 box1, box2를 클래스 이름을 주어서 구별하도록 하자. 
+ */
+
+/*스태틱은 탑, 레프트, 바텀 , 라이트 와 같이 어느 위치에 요소를 위치시킬 것인지 지정할 수 없음 다른 요소들 relative, absolute, fixed, sticky 는 가능하다 
+ top:15px; 이면 기준위치위에서 15px 먼 곳에서 하라는 뜻이다.  */
+/* The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value. */
+/* '도큐먼트'의 일반적인 프로우에 따라서 하는게 static이다. 일반적인게 뭐냐 탑, 라이트 바툼 레프트 지인덱스는 영향이 없다 !! 이게 무슨 소리야 ㅋㅋ,  */
+/*  */
+.box1 .inner1 {
+    position: static;
+
+}
+
+.box2.inner1 {}
