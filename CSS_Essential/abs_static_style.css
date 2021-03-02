@@ -29,14 +29,28 @@
 박스 별로 box1, box2를 클래스 이름을 주어서 구별하도록 하자. 
  */
 
+/* https://engkimbs.tistory.com/922 */
 /*스태틱은 탑, 레프트, 바텀 , 라이트 와 같이 어느 위치에 요소를 위치시킬 것인지 지정할 수 없음 다른 요소들 relative, absolute, fixed, sticky 는 가능하다 
  top:15px; 이면 기준위치위에서 15px 먼 곳에서 하라는 뜻이다.  */
 /* The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value. */
 /* '도큐먼트'의 일반적인 프로우에 따라서 하는게 static이다. 일반적인게 뭐냐 탑, 라이트 바툼 레프트 지인덱스는 영향이 없다 !! 이게 무슨 소리야 ㅋㅋ,  */
 /*  */
 .box1 .inner1 {
-    position: static;
-
+    position: relative;
+    top: 30px;
+    left: 100px;
 }
 
-.box2.inner1 {}
+/* # inner2 는 움직이지 않았다.  */
+
+.box2 {
+    position: relative;
+}
+
+.box2 .inner1 {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+}
+
+/* box2의 이너1 이 absolute로 움직이게 되면서 나머지 이너2는 박스가 없는 것처럼 행동함  */

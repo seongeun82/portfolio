@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    top: 200px;
+    left: 200px;
+    background-color: beige;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background-color: chocolate;
+}
+
+.box2 {
+    background-color: pink;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+
+}
+
+.box3 {
+    background-color: blue;
+}
