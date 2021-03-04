@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom properties</title>
+  <style>
+    /* 최상위 라는 뜻 , 최상위 부모 ? */
+    :root {
+      --background-color: thistle;
+      --base-space: 32px;
+    }
+
+    .first-list {
+      background-color: var(--background-color);
+      /* background-color: thistle; */
+
+      color: whitesmoke;
+      margin-left: var(--font-size);
+    }
+
+    .second-list {
+      background-color: thistle;
+      color: whitesmoke;
+      margin-left: calc(var(--font--size)*3);
+
+      /* calc(20px + var(--font--size)); */
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="first-list">
+    <li>Orange</li>
+    <li>Apple</li>
+  </ul>
+
+  <ul class="second-list">
+    <li>Korea</li>
+    <li>Japan</li>
+    <li>China</li>
+  </ul>
+
+</body>
+
+</html>

@@ -1,7 +1,11 @@
+body {
+    margin: 0px;
+}
+
 .container {
     position: relative;
-    top: 200px;
-    left: 200px;
+    top: 100px;
+    left: 100px;
     background-color: beige;
 }
 
@@ -14,12 +18,16 @@
 
 .box2 {
     background-color: pink;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-
+    position: fixed;
+    width: 100px;
+    top: 20px;
+    left: 20px;
 }
 
 .box3 {
     background-color: blue;
+    position: sticky;
+    /* 움직이다가 고정됨 */
+    top: 100px;
+    left: 70%;
 }
