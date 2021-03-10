@@ -15,6 +15,7 @@
 	--color-yellow: #fff7d1;
 	--color-orange: #feb546;
 	--color-black: #000000;
+	--color-ivory: #fff9b0;
 
 	/* Font size */
 	--font-large: 48px;
@@ -71,9 +72,12 @@ p {
 .section {
 	padding: 50px;
 	text-align: center;
+	margin: auto;
+}
+
+.section__container {
 	max-width: 1200px;
 	margin: auto;
-
 }
 
 /* Navbar */
@@ -239,4 +243,142 @@ button {
 
 .job__description {
 	font-size: var(--font-micro);
+}
+
+/* skills */
+#skills {
+	background-color: var(--color-yellow);
+	margin: auto
+}
+
+
+.skillset {
+	display: flex;
+	color: var(--color-light-white);
+}
+
+.skillset__left {
+	flex-basis: 60%;
+	background-color: var(--color-dark-grey);
+	padding: 20px 40px;
+
+}
+
+.skillset__title {
+	color: var(--color-light-white);
+}
+
+.skillset__right {
+	flex-basis: 40%;
+	background-color: var(--color-light-grey);
+}
+
+.tools {
+	background-color: var(--color-grey);
+	padding: 20px;
+}
+
+.ETC {
+	padding: 20px;
+}
+
+.skill__description {
+	display: flex;
+	justify-content: space-between;
+}
+
+.skill__bar {
+	width: 100%;
+	height: 4px;
+	background-color: var(--color-grey);
+}
+
+/* 여기에서 프로그래스바의 색은 html 에서 반영될 수 있도록 해야합니다.  */
+.skill__value {
+	height: 4px;
+	background-color: var(--color-orange);
+}
+
+.skill {
+	margin-bottom: 16px;
+}
+
+/* works */
+
+.category__btn {
+	border: 1px solid var(--color-dark-white);
+	border-radius: var(--size-border-radius);
+	font-size-adjust: var(--font-regular);
+	padding: 8px 50px;
+}
+
+/* btn active  */
+.category__btn.active,
+.category__btn:hover {
+	background-color: var(--color-blue);
+}
+
+.category__count {
+	background-color: var(--color-orange);
+	border-radius: 50%;
+	color: var(--color-white);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	/* 인라인처럼 있지만 블락처럼 너비와 높이 등을 가져라  */
+	line-height: 20px;
+	position: relative;
+	top: -20px;
+	left: 4px;
+	opacity: 0;
+	transition: all var(--animation-duration) ease;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+	opacity: 1;
+	top: 0;
+}
+
+.work__projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.project {
+	position: relative;
+	width: 280px;
+	height: 250px;
+	margin: 2px;
+	background-color: yellow;
+}
+
+.project__img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.project__description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.project__description h3 {
+	color: var(--color-white);
+}
+
+.project__description h3::after {
+	content: '';
+	display: block;
+	position: relative;
+	left: 50px;
+	width: 25px;
+	height: 2px;
+	margin-left: -12px;
+
 }
