@@ -153,6 +153,7 @@ button {
 	background-color: var(--color-dark-grey);
 	padding: 8px;
 	transition: all var(--animation-duration) ease-in-out;
+	z-index: 1;
 }
 
 /* Home */
