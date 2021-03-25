@@ -12,8 +12,15 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Handle scrolling when tapping on the navbar menu 
+// navbar__toggle btn click 
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 const navbarMenu = document.querySelector('.navbar__menu');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+})
+
+
+// Handle scrolling when tapping on the navbar menu 
 navbarMenu.addEventListener('click', (event) => {
   // console.log(event.target.dataset.link);
   const target = event.target;
@@ -22,6 +29,9 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   };
+
+  navbarMenu.classList.remove('open')
+
   scrollIntoView(link);
 });
 
@@ -62,8 +72,13 @@ const workProjectContainer = document.querySelector('.work__projects');
 const btnList = workProjectContainer.querySelectorAll('a');
 
 workBtnContainer.addEventListener('click', (e) => {
-  workProjectContainer.classList.add('ani-out');
 
+  workBtnContainer.querySelector('.category__btn.selected').classList.remove('selected')
+  const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add('selected')
+
+
+  workProjectContainer.classList.add('ani-out');
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return

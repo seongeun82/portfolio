@@ -125,6 +125,8 @@ button {
 	display: flex;
 }
 
+
+
 .navbar__menu__item {
 	margin-left: 8px;
 	padding: 4px 8px;
@@ -153,7 +155,7 @@ button {
 
 #navbar.navbar--dark {
 	background-color: var(--color-dark-grey);
-	padding: 8px;
+	padding: 16px;
 	transition: all var(--animation-duration) ease-in-out;
 	z-index: 1;
 }
@@ -333,7 +335,7 @@ button {
 }
 
 /* btn active  */
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
 	background-color: var(--color-blue);
 }
@@ -415,7 +417,7 @@ button {
 }
 
 .project__description h3 {
-	color: var(--color-white);
+	color: var(--color-orange);
 }
 
 .project__description h3::after {
@@ -424,9 +426,9 @@ button {
 	position: relative;
 	background-color: var(--color-dark-white);
 	left: 50%;
-	width: 25px;
+	width: 50px;
 	height: 2px;
-	margin-left: -12px;
+	transform: translateX(-50%);
 	margin-top: 8px;
 }
 
@@ -535,10 +537,16 @@ button {
 		align-items: flex-start;
 	}
 
+	.navbar__menu.open {
+		display: block;
+
+	}
+
 	.navbar__menu {
 		flex-direction: column;
 		text-align: center;
 		width: 100%;
+		display: none;
 	}
 
 	.about__majors {
